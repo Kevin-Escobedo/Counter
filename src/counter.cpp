@@ -20,14 +20,14 @@ void Counter::down()
     }
 }
 
-void Counter::reset_count()
+void Counter::reset_count(int other_count)
 {
-    count = 0;
+    count = other_count;
 }
 
-void Counter::reset_step(int reset_step)
+void Counter::reset_step(int other_step)
 {
-    step = reset_step;
+    step = other_step;
 }
 
 int Counter::display()

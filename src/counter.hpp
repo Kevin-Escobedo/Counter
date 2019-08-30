@@ -9,6 +9,6 @@ public:
     void up();
     void down();
     int display();
-    void reset_count();
-    void reset_step(int reset_step = 1);
+    void reset_count(int other_count = 0);
+    void reset_step(int other_step = 1);
 };

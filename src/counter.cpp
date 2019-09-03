@@ -34,3 +34,8 @@ int Counter::display()
 {
     return count;
 }
+
+void Counter::operator ++()
+{
+	count++;
+}

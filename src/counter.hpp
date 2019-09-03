@@ -11,4 +11,5 @@ public:
     int display();
     void reset_count(int other_count = 0);
     void reset_step(int other_step = 1);
+    void operator ++();
 };

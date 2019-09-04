@@ -39,3 +39,9 @@ void Counter::operator ++()
 {
 	count++;
 }
+
+void Counter::operator --()
+{
+	count--;
+}
+

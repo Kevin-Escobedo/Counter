@@ -42,3 +42,24 @@ TEST(counter_tests, doesNotDecrementCountIfNegative)
 
     EXPECT_EQ(c.display(), -10);
 }
+
+TEST(counter_tests, testIncrementOperator)
+{
+	Counter c = Counter();
+	for(int i = 0; i < 100; ++i)
+	{
+		c++;
+	}
+	EXPECT_EQ(c.display(), 100);
+}
+
+TEST(counter_tests, testDecrementOperator)
+{
+	Counter c = Counter(100);
+	for(int i = 0; i < 10; ++i)
+	{
+		c--;
+	}
+	EXPECT_EQ(c.display(), 90);
+}
+

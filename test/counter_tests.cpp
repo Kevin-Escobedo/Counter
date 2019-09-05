@@ -63,3 +63,12 @@ TEST(counter_tests, testDecrementOperator)
 	EXPECT_EQ(c.display(), 90);
 }
 
+TEST(counter_tests, testAssignment)
+{
+	Counter c = Counter();
+	Counter d = Counter(10);
+
+	c = d;
+
+	EXPECT_EQ(c.display(), 10);
+}

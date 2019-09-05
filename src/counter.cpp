@@ -45,3 +45,8 @@ void Counter::operator --()
 	count--;
 }
 
+Counter& Counter::operator =(Counter& other)
+{
+	this->count = other->count;
+	this->step = other->step;
+}

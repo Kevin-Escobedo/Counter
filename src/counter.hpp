@@ -13,5 +13,4 @@ public:
     void reset_step(int other_step = 1);
     void operator ++();
     void operator --();
-    Counter& operator =(Counter& other) noexcept;
 };

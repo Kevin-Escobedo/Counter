@@ -37,10 +37,12 @@ int Counter::display()
 
 void Counter::operator ++()
 {
-	count++;
+	count += step;
 }
 
 void Counter::operator --()
 {
-	count--;
+	count-= step;
 }
+
+

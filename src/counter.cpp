@@ -45,4 +45,12 @@ void Counter::operator --()
 	count-= step;
 }
 
+void Counter::operator ++(int)
+{
+	count += step;
+}
 
+void Counter::operator --(int)
+{
+	count -= step;
+}

@@ -26,7 +26,7 @@ TEST(counter_tests, canIncrementCount)
     Counter c = Counter();
     for(int i = 0; i < 100; ++i)
     {
-        c.up();
+        c++;
     }
 
     EXPECT_GT(c.display(), 0);
@@ -37,7 +37,7 @@ TEST(counter_tests, doesNotDecrementCountIfNegative)
     Counter c = Counter(-10);
     for(int i = 0; i < 100; ++i)
     {
-        c.down();
+        c--;
     }
 
     EXPECT_EQ(c.display(), -10);
@@ -61,14 +61,4 @@ TEST(counter_tests, testDecrementOperator)
 		c--;
 	}
 	EXPECT_EQ(c.display(), 90);
-}
-
-TEST(counter_tests, testAssignment)
-{
-	Counter c = Counter();
-	Counter d = Counter(10);
-
-	c = d;
-
-	EXPECT_EQ(c.display(), 10);
 }

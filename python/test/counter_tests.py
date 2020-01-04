@@ -9,8 +9,8 @@ class CounterTests(unittest.TestCase):
 
     def test_starting_value(self):
         self.assertEqual(self.counter.count, 0)
-        self.assertEqual(Counter(count = 1000), 1000)
-        self.assertEqual(Counter(count = -13), -13)
+        self.assertEqual(Counter(count = 1000).count, 1000)
+        self.assertEqual(Counter(count = -13).count, -13)
 
     def test_incrementing(self):
         negative = Counter(count = -123)
@@ -25,7 +25,7 @@ class CounterTests(unittest.TestCase):
         for i in range(10):
             self.counter.decrement()
             negative.decrement()
-            self.assertEqual(self.counter.count, 10-(i+1))
+            self.assertEqual(self.counter.count, -(i+1))
         self.assertEqual(negative.count, -999999-10)
 
     def test_resetting(self):
@@ -35,7 +35,7 @@ class CounterTests(unittest.TestCase):
         big.reset()
         zero.reset()
         neg.reset()
-        self.counter.zero()
+        self.counter.reset()
 
         self.assertEqual(big.count, 0)
         self.assertEqual(zero.count, 0)

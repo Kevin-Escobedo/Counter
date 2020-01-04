@@ -42,6 +42,17 @@ class CounterTests(unittest.TestCase):
         self.assertEqual(neg.count, 0)
         self.assertEqual(self.counter.count, 0)
 
+    def test_reading_from_file(self):
+        self.counter.increment()
+        self.counter.export_info("tests.cnt")
+
+        self.zero = Counter(count = 0, step = 5)
+        self.zero.import_info("tests.cnt")
+
+        self.assertEqual(self.zero.count, self.counter.count)
+        self.assertEqual(self.zero.step, self.counter.step)
+        
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -18,6 +18,10 @@ class Counter:
         '''Sets the count back to 0'''
         self.count = 0
 
+    def set_step(self, new_step = 1):
+        '''Sets the step to new_step'''
+        self.step = new_step
+
     def export_info(self, filename: str = "*.cnt"):
         '''Writes the count and step size to a file'''
         file = open(filename, "w")
